@@ -1,0 +1,309 @@
+**Begin: file 1 : GigaDBUploadForm_SOAPdenovo2.xls in process...
+query SELECT max(id) from gigadb_user
+id number in db 402
+id number 402
+query select id from gigadb_user where email= 'aquaskyline@gmail.com'
+gigadb_user: null
+query select id from image where location= '100013_YH.jpg'
+query SELECT max(id) from image
+id number in db 701
+id number 701
+query select id from publisher where name= 'GigaScience Database'
+checkcontain result: 3
+flag  3
+query select id from dataset where identifier= '10.5524/100038'
+query SELECT max(id) from dataset
+id number in db 701
+italics found: Updated genome assembly of YH: the first diploid genome sequence of a Han Chinese individual (version 2, 07/2012)
+italics found: Updated genomic data from the YH <em>(Homo sapiens)</em> diploid genome ? the first sequenced Han Chinese individual, a representative of the Asian population.  The genomic DNA used in this study came from an anonymous male Han Chinese individual who has no known genetic diseases.
+
+The original version of the YH genome was assembled based on 3.3 billion reads using the Illumina Genome Analyzer (see dataset <a href="http://dx.doi.org/10.5524/100015" target="_blank">doi:10.5524/100015</a>).  This latest (as of 07/2012) and improved version of the YH genome was assembled based on 2.1 billion reads using the Illumina HiSeq2000. A total of 202G nucleotides data was achieved using 100 bp-long paired end reads with an insert size ranging from 180 bp to 40 kbp, and the genome was sequenced to 67.5-fold average coverage. The latest version of SOAPdenovo2 was used to reassemble, improve and update the previously assembled genome (tools and pipelines available here: <a href="http://dx.doi.org/10.5524/100044" target="_blank">doi:10.5524/100044</a>). By aligning the short reads with SOAP, 177G nucleotides were mapped onto the NCBI reference genome and 99.99% of the genome was covered. The raw sequences, assemblies and relevant tools are released for public use under a <a href="http://creativecommons.org/about/cc0" target="_blank">CC0 license</a>.
+
+More information about the YH genome can be viewed at: <a href="http://yh.genomics.org.cn/" target="_blank">http://yh.genomics.org.cn/</a>
+dataset_size: 8.3751862272E10
+query SELECT max(id) from author
+id number in db 3726
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Wang, J'
+get_result : 3257
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Li, Y'
+get_result : 3173
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Luo, R'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Liu, B'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Xie, Y'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Li, Z'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Fang, X'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Zheng, H'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Qin, J'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Yang, B'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Yu, C'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Ni, P'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Li, N'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Guo, G'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Ye, J'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Fang, L'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Su, Y'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Asan'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Zheng, H'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Kristiansen, K'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Wong, GK'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Nielsen, R'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Durbin, R'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Bolund, L'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Zhang, X'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Li, S'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Yang, H'
+get_result : null
+get_result from query: select id from author a where coalesce(a.surname,'') ||', '||substring(coalesce(a.first_name,''),1,1) || substring(coalesce(a.middle_name,''),1,1) ='Wang, J'
+get_result : 3257
+query SELECT max(id) from dataset_author
+id number in db 8829
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3257
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3173
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3726
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3727
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3728
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3729
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3730
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3731
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3732
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3733
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3734
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3735
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3736
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3737
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3738
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3739
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3740
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3741
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3742
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3743
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3744
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3745
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3746
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3747
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3748
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3749
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3750
+get_result : null
+get_result from query: select id from dataset_author where dataset_id= 701 and author_id= 3257
+get_result : null
+query SELECT max(id) from relation
+id number in db 248
+get_result from query: select relation.id from relation, relationship where relation.relationship_id=relation.id and dataset_id=701 and related_doi= '10.5524/100015' and relationship.name= 'IsNewVersionOf'
+get_result : null
+query SELECT max(id) from link
+id number in db 49
+get_result from query: select id from link where dataset_id= 701 and link= 'ENA:ERP001652'
+get_result : null
+query SELECT max(id) from type
+id number in db 17
+query select id from type where name= 'Genomic'
+checkcontain result: 2
+query SELECT max(id) from dataset_type
+id number in db 241
+get_result from query: select id from dataset_type where dataset_id= 701 and type_id= 2
+get_result : null
+pk temp:.................. 241
+query SELECT max(id) from external_link
+id number in db 37
+query select id from external_link_type where name= 'Additional information'
+checkcontain result: 1
+get_result from query: select id from external_link where dataset_id= 701 and url= 'http://yh.genomics.org.cn/'
+get_result : null
+query select id from external_link_type where name= 'Genome browser'
+checkcontain result: 2
+get_result from query: select id from external_link where dataset_id= 701 and url= 'http://yh.genomics.org.cn/mapview.jsp?'
+get_result : null
+query SELECT max(id) from species
+id number in db 21
+all species id 21
+query select id from species where tax_id= 9606
+temp in species:  21
+Index in species:  0
+Index in species:  1
+all record[21, 9606, Human, , ]
+row: 3
+value 21
+this is map key 9606
+this is map value 21
+Row Number6
+query SELECT max(id) from sample
+id number in db 433
+get_result from query: select a.id from sample a, species b where a.species_id = b.id and b.common_name ='YH'
+get_result : null
+species: 9606
+sample_id:YH
+row: 3
+empt row sample: 3query SELECT max(id) from dataset_sample
+id number in db 434
+get_result from query: select id from dataset_sample where dataset_id= 701 and sample_id= 433
+get_result : null
+sample_map: 433
+query SELECT max(id) from file_type
+id number in db 133
+query select id from file_type where name= 'Readme'
+checkcontain result: 1
+flag in file_type:   1
+query select id from file_type where name= 'Genome assembly'
+flag in file_type:   null
+temp:  133
+Index:  0
+Index:  1
+query select id from file_type where name= 'Genome sequence'
+flag in file_type:   null
+temp:  134
+Index:  0
+Index:  1
+row: 18
+empt row y: 18query SELECT max(id) from file_format
+id number in db 56
+file_Name: readme.txt
+file_extension: txt
+query select id from file_format where name= 'TEXT'
+checkcontain result: 1
+flag in file_format:   1
+file_Name: asm_yanh.scafSeq.closure.gz
+file_extension: gz
+query select id from file_format where name= 'GZIP'
+flag in file_format:   null
+file_Name: 110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_1.fq.gz
+file_extension: gz
+file_Name: 110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_2.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_1.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_2.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_1.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_2.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_1.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_2.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_1.fq.gz
+file_extension: gz
+file_Name: 110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_2.fq.gz
+file_extension: gz
+file_Name: 110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_1.fq.gz
+file_extension: gz
+file_Name: 110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_2.fq.gz
+file_extension: gz
+file_Name: 110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_1.fq.gz
+file_extension: gz
+file_Name: 110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_2.fq.gz
+file_extension: gz
+row: 18
+empt row y: 18colNum: 80
+query SELECT max(id) from file
+id number in db 87543
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/readme.txt'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/readme.txt
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/asm_yanh.scafSeq.closure.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/asm_yanh.scafSeq.closure.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_2.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_2.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_2.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_2.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_2.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_2.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_1.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_1.fq.gz
+query select id from file where location= 'ftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_2.fq.gz'
+llllllllllftp://climb.genomics.cn/pub/10.5524/100001_101000/100038/data/110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_2.fq.gz
+row: 18
+empt row y: 18
+query SELECT max(id) from project
+id number in db 4
+fillTable_project url: "1000 Genomes":http://www.1000genomes.org/
+query select id from project where url= 'http://www.1000genomes.org/'
+query SELECT max(id) from dataset_project
+id number in db 125
+get_result from query: select id from dataset_project where dataset_id= 701 and project_id= 4
+get_result : null
+validation upload status:  Published
+target: relationship
+content: IsNewVersionOf
+values: [IsSupplementTo, IsSupplementedBy, IsNewVersionOf, IsPreviousVersionOf, IsPartOf, HasPart, References, IsReferencedBy, Compiles, IsCompiledBy]
+contentXXX: ENA:ERP001652
+target: ext_acc_link
+content: ENA
+values: [AE, dbGaP, dbSNP, dbVar, DDBJ, EGA, ENA, GENBANK, GEO, PROJECT, SAMPLE, SRA, TRACE]
+this is image_location    1000Genomeslogo.jpg
+1
+WARN - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+id   9606
+WARN - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+URL http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=9606
+BeginIndex 21
+endIndex -1
+[GigaDBUploadForm_SOAPdenovo2.xls]

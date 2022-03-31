@@ -1,0 +1,36 @@
+**Begin: file 1 : GigaDBUploadForm_SOAPdenovo2.xls in process...
+ValidationTest for file_size: readme.txt  Warning: file_size < 1
+ValidationTest for file_size: asm_yanh.scafSeq.closure.gz  Warning: file_size < 1
+ValidationTest for file_size: 110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110112_I199_FC819BBABXX_L3_HUMiqvDBTDWAAPE_2.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L5_HUMiqvDBTDIAAPE_2.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L6_HUMiqvDBTDIBAPE_2.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L7_HUMiqvDBTDBAAPE_2.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110114_I481_FC81C7HABXX_L8_HUMiqvDBTDBABPE_2.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110115_I125_FC81C7KABXX_L3_HUMiqvDBTDLAAPE_2.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_1.fq.gz  Warning: file_size < 1
+ValidationTest for file_size: 110115_I270_FC81CBVABXX_L5_HUMiqvDBTDBCAPE_2.fq.gz  Warning: file_size < 1
+java.lang.StringIndexOutOfBoundsException: Range [21, -1) out of bounds for length 30975
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112)
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349)
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4589)
+	at java.base/java.lang.String.substring(String.java:2703)
+	at MyHttpClient.getCommon_name(MyHttpClient.java:195)
+	at Validation.common_nameTest(Validation.java:460)
+	at Validation.speciesTest(Validation.java:368)
+	at Validation.validTest(Validation.java:248)
+	at Main.processExcel2Database(Main.java:67)
+	at Main.processExcel(Main.java:135)
+	at Main.main(Main.java:175)
+The following files has some errors, thus they are not uploaded!
+[GigaDBUploadForm_SOAPdenovo2.xls]

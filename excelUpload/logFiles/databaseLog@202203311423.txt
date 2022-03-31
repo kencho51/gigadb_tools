@@ -1,0 +1,5 @@
+**Begin: file 1 : GigaDBUploadForm_SOAPdenovo2.xls in process...
+**************************
+begin;
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+**************************

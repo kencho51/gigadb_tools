@@ -1,0 +1,14 @@
+/Volumes/kencho/gigadb-tools-dataupload/excelUpload/src/Database.java:26: warning: [deprecation] newInstance() in Class has been deprecated
+			Class.forName("org.postgresql.Driver").newInstance();
+			                                      ^
+  where T is a type-variable:
+    T extends Object declared in class Class
+/Volumes/kencho/gigadb-tools-dataupload/excelUpload/src/Database.java:55: warning: [deprecation] newInstance() in Class has been deprecated
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			                                      ^
+  where T is a type-variable:
+    T extends Object declared in class Class
+/Volumes/kencho/gigadb-tools-dataupload/excelUpload/src/MyFrame.java:176: warning: [deprecation] show() in Window has been deprecated
+		frame.show();
+		     ^
+3 warnings
