@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<setting>
+	<schemaFile>configuration/gigascience.sql</schemaFile>
+	<excelDir>dataDir</excelDir>
+	<uploadDir>uploadDir</uploadDir>
+	<databaseUrl>jdbc:postgresql://host.docker.internal:54321/gigadbv3_20210929_v9.3.25</databaseUrl>
+	<databaseUserName>gigadb</databaseUserName>
+	<databasePassword>vagrant</databasePassword>
+</setting>
