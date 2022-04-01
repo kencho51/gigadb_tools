@@ -39,4 +39,4 @@ javac -Xlint:deprecation -d $PROJECT_HOME/bin \
   &> javac.log
 
 # Execute ExceltoGigaDB tool
-#java -cp $CLASSPATH:$PROJECT_HOME/configuration:$PROJECT_HOME/bin Main &> java.log
+java -cp $CLASSPATH:$PROJECT_HOME/configuration:$PROJECT_HOME/bin Main &> java.log
