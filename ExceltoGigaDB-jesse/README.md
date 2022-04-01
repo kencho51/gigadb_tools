@@ -71,6 +71,20 @@ Password for user gigadb:
 # databaseUserName:gigadb
 # databasePassword:vagrant
 
+# For restoring the database
+postgres=# SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'gigadbv3_20210920';
+ pg_terminate_backend 
+----------------------
+ t
+(1 row)
+
+postgres=# drop database gigadbv3_20210920;
+DROP DATABASE
+postgres=# create database gigadbv3_20210920;
+CREATE DATABASE
+% psql -h localhost -p 54321 -U gigadb -d gigadbv3_20210920 < gigadb/app/tools/files-url-updater/sql/gigadbv3_20210920_v9.3.25.backup
+Password for user gigadb: 
+
 ```
 
 
