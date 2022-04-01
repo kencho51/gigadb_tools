@@ -1,1 +1,9 @@
 .idea
+
+ExceltoGigaDB-jesse/logFiles/*
+ExceltoGigaDB-jesse/java.log
+ExceltoGigaDB-jesse/javac.log
+
+excelUpload/logFiles/*
+excelUpload/java.log
+excelUpload/javac.log
