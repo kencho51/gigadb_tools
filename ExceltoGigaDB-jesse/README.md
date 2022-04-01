@@ -31,6 +31,7 @@ Run `/src/Main.java`
 
 Check the log file and dataDir to see whether it was successful uploaded.
 
-
+### Reference
+1. Source code [repo](https://github.com/jessesiu/ExceltoGigaDB)
 
 
