@@ -31,7 +31,12 @@ javac -Xlint:deprecation -d $PROJECT_HOME/bin \
   $PROJECT_HOME/src/Log/*.java \
   $PROJECT_HOME/src/Exception/*.java \
   $PROJECT_HOME/src/Test/*.java \
+  --add-exports java.base/sun.net.ftp=ALL-UNNAMED \
+  --add-exports java.desktop/sun.font=ALL-UNNAMED \
+  --add-exports java.desktop/sun.print.resources=ALL-UNNAMED \
+  --add-exports java.desktop/sun.awt=ALL-UNNAMED \
+  --add-exports java.rmi/sun.rmi.runtime=ALL-UNNAMED \
   &> javac.log
 
 # Execute ExceltoGigaDB tool
-java -cp $CLASSPATH:$PROJECT_HOME/configuration:$PROJECT_HOME/bin Main &> java.log
+#java -cp $CLASSPATH:$PROJECT_HOME/configuration:$PROJECT_HOME/bin Main &> java.log
