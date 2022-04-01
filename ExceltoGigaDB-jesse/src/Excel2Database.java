@@ -2648,54 +2648,47 @@ public class Excel2Database {
 		int size = table.attributeList.size();
 		ArrayList<String> record = new ArrayList<String>();
 
-		String key="_"+getIdentifier();
-		
+		String key = "_" + getIdentifier();
+
 		for (int i = 0; i < size; i++) {
-			String attribute=table.attributeList.get(i);
-			String content = getContent(studySheet,attribute);
-			if(attribute.equals("id"))
-			{ 
-				String value= getContent(studySheet, "identifier");
-				String flag= database.checkcontain1("dataset", "identifier", value, "id");
-				if(flag==null)
-				dataset_id= database.getid("dataset");
+			String attribute = table.attributeList.get(i);
+			String content = getContent(studySheet, attribute);
+			if (attribute.equals("id")) {
+				String value = getContent(studySheet, "identifier");
+				String flag = database.checkcontain1("dataset", "identifier", value, "id");
+				if (flag == null)
+					dataset_id = database.getid("dataset");
 				else
-				dataset_id= Integer.parseInt(flag);
-				
-				content= String.valueOf(dataset_id);
+					dataset_id = Integer.parseInt(flag);
+
+				content = String.valueOf(dataset_id);
 				// dataset_attributes
-				
-				
-				
+
+
 			}
-			if(attribute.equals("submitter_id"))
-			{
-				content= String.valueOf(user_id);
+			if (attribute.equals("submitter_id")) {
+				content = String.valueOf(user_id);
 			}
-			
-			if(attribute.equals("image_location")){
+
+			if (attribute.equals("image_location")) {
 				record.add(locationMap.get(key));
-				if(locationMap.get(key)==null)
-				{
-					String image_name= getContent(studySheet,attribute);
+				if (locationMap.get(key) == null) {
+					String image_name = getContent(studySheet, attribute);
 					Excel2Database.excel2DBLog.writeLine(
-					"Warning: " + image_name + " image file does not exist");
+							"Warning: " + image_name + " image file does not exist");
 				}
 				continue;
 			}
-			if(attribute.equals("image_id"))
-			{
-				content= String.valueOf(image_id);
+			if (attribute.equals("image_id")) {
+				content = String.valueOf(image_id);
 			}
-			
-			if(attribute.equals("excelfile"))
-			{
-				
-				content= file.getName();
+
+			if (attribute.equals("excelfile")) {
+
+				content = file.getName();
 			}
-			
-			if(attribute.equals("excelfile_md5"))
-			{
+
+			if (attribute.equals("excelfile_md5")) {
 				BufferedInputStream bis = new BufferedInputStream(new FileInputStream(
 						file));
 				MessageDigest md = null;
@@ -2708,31 +2701,26 @@ public class Excel2Database {
 				}
 				content = format(md.digest());
 			}
-		
 
-		//from here
-			if(attribute.equals("identifier"))
-			{
+
+			//from here
+			if (attribute.equals("identifier")) {
 				email_identifier = content;
 				//database.assigndoitest();
-				if(content == null || content.equals(""))
-				{
+				if (content == null || content.equals("")) {
 					//String query = "select max(identifier) from dataset;";
-					content=database.assigndoi();//How to automatic assign new doi using last doi in database +1
+					content = database.assigndoi();//How to automatic assign new doi using last doi in database +1
 					//.add(content);
 				}
 			}
-			
-			if(attribute.equals("publisher_id"))
-			{
-				content= String.valueOf(publisher_id);
+
+			if (attribute.equals("publisher_id")) {
+				content = String.valueOf(publisher_id);
 			}
-			
-			if(attribute.equals("ftp_site"))
-			{
-				if(content == null || content.equals(""))
-				{
-					content="ftp://climb.genomics.cn/pub/10.5524/100001_101000/doi";
+
+			if (attribute.equals("ftp_site")) {
+				if (content == null || content.equals("")) {
+					content = "ftp://climb.genomics.cn/pub/10.5524/100001_101000/doi";
 					//record.add(content);
 				}
 			}
@@ -2765,90 +2753,82 @@ public class Excel2Database {
 				//record.add(content);
 				
 			}*/
-			if(attribute.equals("upload_status"))
-			{
-				if(content.equalsIgnoreCase("Published"))
-				{
-					if(database.checkemail(email_identifier))
-					   send_email=true;
+			if (attribute.equals("upload_status")) {
+				if (content.equalsIgnoreCase("Published")) {
+					if (database.checkemail(email_identifier))
+						send_email = true;
 				}
 			}
-			
-			if(attribute.equals("publication_date"))
-			{
-				publication_year=content;
-				content=null;
-			}
-			if(attribute.equals("title"))
-				title=content;
 
-			if(attribute.equals("dataset_size")){
-				
+			if (attribute.equals("publication_date")) {
+				publication_year = content;
+				content = null;
+			}
+			if (attribute.equals("title"))
+				title = content;
+
+			if (attribute.equals("dataset_size")) {
+
 				//System.out.println(content);
-				content= content.replaceAll(" ","");
-				Pattern   p   =   Pattern.compile("(\\d+)(\\w+)"); 
+				content = content.replaceAll(" ", "");
+				Pattern p = Pattern.compile("(\\d+)(\\w+)");
 				//Pattern   p   =   Pattern.compile("(\\d+\\.?\\d+?)(\\w+)"); 
-				Matcher   m   =   p.matcher(content);
-				String KB= new String("KB");
-				String MB= new String("MB");
-				String GB= new String("GB");
-				String TB= new String("TB");
-				double dataset_size=0;
-				if(m.find()){ 
-				        String   num_letter   =   m.group(1); 
-				        String    union  =   m.group(2); 
-				       // System.out.println(num_letter);
-				       // System.out.println(union);
-				        if(KB.equalsIgnoreCase(union))
-				        {
-				        	 dataset_size=Double.parseDouble(num_letter);
-				        	 dataset_size*=(1024);
-							 System.out.println("dataset_size: "+ dataset_size);
-						
-				        
-				        }
-				        
-				        if(MB.equalsIgnoreCase(union))
-				        {
-				        	dataset_size=Double.parseDouble(num_letter);
-							dataset_size*=(1024*1024);
-							System.out.println("dataset_size: "+ dataset_size);
-							
-				        }
-				        
-				        if(GB.equalsIgnoreCase(union))
-				        {
-				        	dataset_size=Double.parseDouble(num_letter);
-							dataset_size*=(1024*1024*1024);
-							System.out.println("dataset_size: "+ dataset_size);
-												
-				        
-				        }
-				        if(TB.equalsIgnoreCase(union))
-				        {
-				        	dataset_size=Double.parseDouble(num_letter);
-							dataset_size*=(1024*1024*1024*1024);
-							System.out.println("dataset_size: "+ dataset_size);
-							
-				        
-				        }
-				}
-					Pattern pattern = Pattern.compile("\\d+(.\\d+)?$");
-					Matcher   m1   =   pattern.matcher(content);
-					if(m1.find())
-					{
-						dataset_size=Integer.valueOf(content);
-			        	dataset_size*=(1024*1024*1024);
-			        	System.out.println("dataset_size: "+ dataset_size);
+				Matcher m = p.matcher(content);
+				String KB = new String("KB");
+				String MB = new String("MB");
+				String GB = new String("GB");
+				String TB = new String("TB");
+				double dataset_size = 0;
+				if (m.find()) {
+					String num_letter = m.group(1);
+					String union = m.group(2);
+					// System.out.println(num_letter);
+					// System.out.println(union);
+					if (KB.equalsIgnoreCase(union)) {
+						dataset_size = Double.parseDouble(num_letter);
+						dataset_size *= (1024);
+						System.out.println("dataset_size: " + dataset_size);
+
+
 					}
-		
+
+					if (MB.equalsIgnoreCase(union)) {
+						dataset_size = Double.parseDouble(num_letter);
+						dataset_size *= (1024 * 1024);
+						System.out.println("dataset_size: " + dataset_size);
+
+					}
+
+					if (GB.equalsIgnoreCase(union)) {
+						dataset_size = Double.parseDouble(num_letter);
+						dataset_size *= (1024 * 1024 * 1024);
+						System.out.println("dataset_size: " + dataset_size);
+
+
+					}
+					if (TB.equalsIgnoreCase(union)) {
+						dataset_size = Double.parseDouble(num_letter);
+						dataset_size *= (1024 * 1024 * 1024 * 1024);
+						System.out.println("dataset_size: " + dataset_size);
+
+
+					}
+				}
+				Pattern pattern = Pattern.compile("\\d+(.\\d+)?$");
+				Matcher m1 = pattern.matcher(content);
+				if (m1.find()) {
+					dataset_size = Integer.valueOf(content);
+					dataset_size *= (1024 * 1024 * 1024);
+					System.out.println("dataset_size: " + dataset_size);
+				}
+
 				//double dataset_size=Double.parseDouble(content);
 				//System.out.println(dataset_size);
 				//dataset_size*=(1024*1024*1024);
-     			dataset_size=(long)dataset_size;
-				long long_size=new Double(dataset_size).longValue();
+				dataset_size = (long) dataset_size;
+				long long_size = new Double(dataset_size).longValue();
 //				System.out.println(long_size);
-				content=String.valueOf(long_size);
+				content = String.valueOf(long_size);
 //				System.out.println(content);
 			}
 //			if(attribute.equals("description")){
@@ -2857,11 +2837,12 @@ public class Excel2Database {
 //					System.out.println(content.charAt(l)+" : "+(int)(content.charAt(l)));
 //				}
 //			}
-			
+
 			record.add(content);
 		}
 
 		table.recordList.add(record);
+	}
 	
 	public void fillTable_author() throws SQLException {
 		setInsertOrder("author");

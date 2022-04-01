@@ -21,7 +21,7 @@ import sun.print.resources.serviceui;
  */
 
 /**
- * @author þý‹æ£®æ´þý
+ * @author
  * 
  * @date 2012-4-29
  */
