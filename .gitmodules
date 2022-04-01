@@ -1,0 +1,3 @@
+[submodule "ExceltoGigaDB"]
+	path = ExceltoGigaDB
+	url = https://github.com/jessesiu/ExceltoGigaDB.git
