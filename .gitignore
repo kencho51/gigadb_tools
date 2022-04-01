@@ -3,6 +3,7 @@
 ExceltoGigaDB-jesse/logFiles/*
 ExceltoGigaDB-jesse/java.log
 ExceltoGigaDB-jesse/javac.log
+ExceltoGigaDB-jesse/uploadDir/*
 
 excelUpload/logFiles/*
 excelUpload/java.log
