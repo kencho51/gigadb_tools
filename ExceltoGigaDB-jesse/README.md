@@ -31,6 +31,49 @@ Run `/src/Main.java`
 
 Check the log file and dataDir to see whether it was successful uploaded.
 
+### Detail steps to get the tool running
+```
+# Get gigadb runing and create a production database
+% ./up.sh
+% docker-compose run --rm test bash
+Creating deployment_test_run ... done
+root@944483d5db95:/var/www# psql -h database -p 5432 -U gigadb postgres
+Password for user gigadb: 
+psql (11.14 (Debian 11.14-0+deb10u1), server 11.13)
+Type "help" for help.
+
+postgres=# postgres=# create database gigadbv3_20210920;
+postgres=# \l
+                                   List of databases
+       Name        | Owner  | Encoding |  Collate   |   Ctype    |  Access privileges   
+-------------------+--------+----------+------------+------------+----------------------
+ fuwdb             | fuwdb  | UTF8     | en_US.utf8 | en_US.utf8 | 
+ fuwdb_test        | fuwdb  | UTF8     | en_US.utf8 | en_US.utf8 | 
+ gigadb            | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | 
+ gigadb_testdata   | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | 
+ gigadb_tool       | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | =Tc/gigadb          +
+                   |        |          |            |            | gigadb=CTc/gigadb   +
+                   |        |          |            |            | gigadb123=CTc/gigadb
+ gigadbv3_20210920 | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | 
+ postgres          | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | 
+ production_like   | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0         | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | =c/gigadb           +
+                   |        |          |            |            | gigadb=CTc/gigadb
+ template1         | gigadb | UTF8     | en_US.utf8 | en_US.utf8 | =c/gigadb           +
+                   |        |          |            |            | gigadb=CTc/gigadb
+(10 rows)
+
+% psql -h localhost -p 54321 -U gigadb -d gigadbv3_20210920 < gigadb/app/tools/files-url-updater/sql/gigadbv3_20210920_v9.3.25.backup
+Password for user gigadb: 
+
+# Update the database connection settings
+# databaseUrl:jdbc:postgresql://localhost:54321/gigadbv3_20210920
+# databaseUserName:gigadb
+# databasePassword:vagrant
+
+```
+
+
 ### Reference
 1. Source code [repo](https://github.com/jessesiu/ExceltoGigaDB)
 
